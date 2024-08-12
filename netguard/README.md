@@ -1,4 +1,4 @@
-
+cargo 
 ## netguard
 
 This project utilizes Rust and eBPF to manage network traffic based on configured rules.
