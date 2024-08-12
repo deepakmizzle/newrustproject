@@ -1,4 +1,4 @@
-cargo 
+
 ## netguard
 
 This project utilizes Rust and eBPF to manage network traffic based on configured rules.
@@ -132,4 +132,4 @@ curl -X POST http://localhost:8080/start_blocknet \
 Contributions are welcome! Please follow the standard fork-and-pull request workflow. Ensure that your changes are well-tested and documented.
 License
 
-**This project is licensed under the MIT License. See the LICENSE file for details.**
+**This project is licensed under the MIT License. See the LICENSE file for details.**"# netguard" 
