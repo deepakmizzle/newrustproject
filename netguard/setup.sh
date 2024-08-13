@@ -4,7 +4,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup install stable
 rustup install nightly
-sudo apt-get install build-essential libssl-dev pkg-config libclang-dev
+sudo apt-get install build-essential libssl-dev pkg-config libclang-dev llvm
 cargo install bpf-linker
 cargo xtask build-ebpf
 llvm-objdump -S target/bpfel-unknown-none/debug/netguard
