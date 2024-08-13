@@ -1,3 +1,11 @@
+sudo apt update
+sudo apt install curl
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+rustup install stable
+rustup install nightly
+cargo install bpf-linker
+
 # Take the build of ebpf program
 cargo xtask build-ebpf
 # command to see the output
