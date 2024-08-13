@@ -4,17 +4,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup install stable
 rustup install nightly
+sudo apt-get install build-essential libssl-dev pkg-config libclang-dev
 cargo install bpf-linker
-
-# Take the build of ebpf program
 cargo xtask build-ebpf
-# command to see the output
 llvm-objdump -S target/bpfel-unknown-none/debug/netguard
-# to run the program
-cargo xtask run -- -h
-# to see the logs(run in a new terminal)
+#cargo xtask run -- -h
 RUST_LOG=info cargo xtask run -- --iface wlp58s0
 # After stoppping using Ctrl+C checking the program get detached
-sudo bpftool prog list
+#sudo bpftool prog list
 #run the binary
-sudo -E target/debug/netguard --iface wlp58s0
+#sudo -E target/debug/netguard --iface wlp58s0
